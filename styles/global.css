@@ -1,0 +1,38 @@
+:root {
+    --violet: #635fc7;
+    --soft-violtet: #a8a4ff;
+    --black: #000112;
+    --black-bg: #20212c;
+    --dark-grey: #2b2c37;
+    --lines: #3e3f4e;
+    --medium: #828fa3;
+    --lines-light: #e4ebfa;
+    --light-bg: #f4f7fd;
+    --white: #fff;
+    --red: #ea5555;
+    --red-hover: #ff9898;
+    --heading-xl: bold 24px/30px 'Plus Jakarta Sans';
+    --heading-l: bold 18px/23px 'Plus Jakarta Sans';
+    --heading-m: bold 15px/19px 'Plus Jakarta Sans';
+    --heading-s: bold 12px/15px 'Plus Jakarta Sans';
+    --heading-s-spacing: 2.4px;
+    --heading-s: bold 12px/15px 'Plus Jakarta Sans';
+    --body-l: 500 13px/23px 'Plus Jakarta Sans';
+    --body-m: bold 12px/15px 'Plus Jakarta Sans';
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--black-bg);
+}
+img {
+    object-fit: cover;
+}
+@media (prefers-color-scheme: dark) {
+    p {
+        color: var(--white);
+    }
+}
