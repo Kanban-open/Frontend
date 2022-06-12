@@ -31,6 +31,13 @@ body {
 img {
     object-fit: cover;
 }
+.center {
+    display: grid;
+    place-self: center;
+}
+figure {
+    display: inline-flex;
+}
 @media (prefers-color-scheme: dark) {
     p {
         color: var(--white);

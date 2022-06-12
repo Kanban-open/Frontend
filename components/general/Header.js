@@ -1,23 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import icon from '/public/assets/icons/logo-mobile.svg';
+import add from '/public/assets/icons/icon-add-task-mobile.svg';
+import eclipse from '/public/assets/icons/icon-vertical-ellipsis.svg';
+import down from '/public/assets/icons/icon-chevron-down.svg';
 
 const HeaderComponent = styled.header`
     display: flex;
     justify-content: space-between;
-    padding: 24px 16px;
+    padding: 16px;
     align-items: center;
+    background: var(--dark-grey);
 `;
 
 const IconHeader = styled.figure`
     width: 24px;
     height: 24px;
-    img {
+    & img {
         width: 24px;
         height: 24px;
-    }
-    p {
-        font: var(--heading-m);
     }
 `;
 const Add = styled.article`
@@ -29,31 +30,44 @@ const Add = styled.article`
         height: 12px;
     }
 `;
+const SectionsComponent = styled.section`
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+    align-items: center;
+    & p {
+        font: var(--heading-m);
+    }
+`;
 
 const Header = () => {
     return (
         <HeaderComponent>
-            <section>
+            <SectionsComponent>
                 <IconHeader>
                     <img src={icon.src} alt="icon home" />
                 </IconHeader>
-                <p>
-                    Platform Launch
+                <div>
+                    <p>Platform Launch</p>
                     <span>
                         <figure>
-                            <img src="" alt="" />
+                            <img src={down.src} alt="" />
                         </figure>
                     </span>
-                </p>
-            </section>
-            <section>
-                <Add />
-            </section>
+                </div>
+            </SectionsComponent>
+            <SectionsComponent>
+                <Add>
+                    <img src={add.src} alt="add" className="center" />
+                </Add>
+                <figure>
+                    <img src={eclipse.src} alt="" />
+                </figure>
+            </SectionsComponent>
             <style jsx>{`
-                section {
-                    display: flex;
-                    justify-content: center;
-                    column-gap: 16px;
+                div {
+                    display: inline-flex;
+                    column-gap: 4px;
                 }
             `}</style>
         </HeaderComponent>
