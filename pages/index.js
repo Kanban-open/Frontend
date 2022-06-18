@@ -1,27 +1,39 @@
-import {
-    Primary,
-    PrimarySmall,
-    Secundary,
-    Destructive,
-} from 'components/general/buttons';
-import { Checkbox } from 'components/general/checkbox';
-import { Dropdown } from 'components/general/dropdown';
-import { TextField } from 'components/general/textField';
+import { Primary } from 'components/general/buttons';
 import React from 'react';
+import styled from 'styled-components';
+import add from '/public/assets/icons/icon-add-task-mobile.svg';
 
-const Home = () => {
+const Add = styled.span`
+    img {
+        width: 12px;
+        height: 12px;
+    }
+`;
+const NoContent = styled.section`
+    height: calc(100vh - 60px);
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    p {
+        font: var(--heading-l);
+        color: var(--medium);
+    }
+`;
+
+const Index = () => {
     return (
-        <React.Fragment>
-            <Primary>Hola</Primary>
-            <PrimarySmall>Hola</PrimarySmall>
-            <Secundary>Hola</Secundary>
-            <Destructive>Hola</Destructive>
-            <Checkbox>Idle</Checkbox>
-            <TextField placeholder="hola" />
-            <TextField placeholder="hola" error="Can’t be empty" />
-            <Dropdown></Dropdown>
-        </React.Fragment>
+        <NoContent className="rs-24">
+            <p>
+                Este tablero esta vacio. Crea una nueva columna para comenzar.
+            </p>
+            <Primary>
+                <Add>
+                    <img src={add.src} alt="" />
+                </Add>
+                Agregar una nueva columna
+            </Primary>
+        </NoContent>
     );
 };
 
-export default Home;
+export default Index;

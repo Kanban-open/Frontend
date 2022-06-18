@@ -20,6 +20,10 @@ const ButtonPrimary = styled(Button)`
     padding: 10px 64px;
     background: var(--violet);
     font: var(--heading-m);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
     &:hover {
         background: var(--soft-violtet);
     }

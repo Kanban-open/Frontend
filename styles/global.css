@@ -38,6 +38,30 @@ img {
 figure {
     display: inline-flex;
 }
+.rs-8 {
+    row-gap: 8px;
+}
+.rs-16 {
+    row-gap: 16px;
+}
+.rs-24 {
+    row-gap: 24px;
+}
+.cs-8 {
+    column-gap: 8px;
+}
+.cs-16 {
+    column-gap: 16px;
+}
+.cs-24 {
+    column-gap: 24px;
+}
+.d-f {
+    display: flex;
+}
+.d-g {
+    display: grid;
+}
 @media (prefers-color-scheme: dark) {
     p {
         color: var(--white);
