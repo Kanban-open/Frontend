@@ -62,6 +62,9 @@ figure {
 .d-g {
     display: grid;
 }
+.d-ig {
+    display: inline-grid;
+}
 @media (prefers-color-scheme: dark) {
     p {
         color: var(--white);

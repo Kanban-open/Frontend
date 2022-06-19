@@ -8,6 +8,7 @@ const CardComponent = styled.div`
     display: grid;
     width: 100%;
     box-shadow: 0px 4px 6px 0px #364e7e1a;
+    cursor: pointer;
 `;
 const Title = styled.p`
     color: var(--white);
