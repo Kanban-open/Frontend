@@ -7,6 +7,10 @@ const Container = ({ children }) => {
             <style jsx>{`
                 section {
                     width: 310px;
+                    grid-template-rows: 16px auto;
+                    height: calc(100vh - 84px);
+                    overflow-y: scroll;
+                    position: relative;
                 }
                 ::-webkit-scrollbar {
                     width: 8px;
@@ -23,9 +27,6 @@ const Container = ({ children }) => {
                 ::-webkit-scrollbar-thumb:hover {
                     background: #3f3f47;
                 }
-                grid-template-rows: 16px auto;
-                height: calc(100vh - 60px);
-                overflow-y: scroll;
             `}</style>
         </section>
     );
