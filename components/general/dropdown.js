@@ -14,10 +14,14 @@ const Select = styled.select`
     }
 `;
 
-const Dropdown = () => {
+const Dropdown = ({ selections }) => {
     return (
         <Select>
-            <option value="">Hola</option>
+            {selections.map((selection, key) => (
+                <option value={selection} key={key}>
+                    {selection}
+                </option>
+            ))}
         </Select>
     );
 };

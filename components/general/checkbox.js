@@ -61,20 +61,22 @@ const CheckComponent = styled.div`
     }
 `;
 
-const CheckboxContainer = ({ children }) => {
+const CheckboxContainer = ({ children, completed }) => {
     return (
         <CheckComponent>
-            <input type="checkbox" />
+            <input type="checkbox" checked={completed} />
             <div></div>
             <p>{children}</p>
         </CheckComponent>
     );
 };
 
-const Checkbox = ({ children }) => {
+const Checkbox = ({ children, completed }) => {
     return (
         <Normal>
-            <CheckboxContainer>{children}</CheckboxContainer>
+            <CheckboxContainer completed={completed}>
+                {children}
+            </CheckboxContainer>
         </Normal>
     );
 };
