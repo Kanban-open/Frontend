@@ -8,7 +8,7 @@ const ModalComponent = styled.section`
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    display: grid;
+    display: ${(props) => props.openModal};
     place-items: center;
 `;
 
@@ -23,6 +23,7 @@ const ModalContent = styled.article`
     row-gap: 24px;
     max-height: 70vh;
     overflow-y: auto;
+    position: relative;
     ::-webkit-scrollbar {
         width: 8px;
     }
@@ -56,12 +57,17 @@ const TitleContainer = styled.div`
     }
 `;
 
-const Modal = ({ title, children, Action }) => {
+const Modal = ({ title, children, Action, editable, display }) => {
     return (
-        <ModalComponent>
+        <ModalComponent openModal={(display && 'grid') || 'none'}>
             <ModalContent>
                 <TitleContainer>
-                    <Title>{title}</Title>
+                    <Title
+                        contentEditable={editable}
+                        suppressContentEditableWarning={editable}
+                    >
+                        {title}
+                    </Title>
                     {Action && <Action />}
                 </TitleContainer>
                 {children}

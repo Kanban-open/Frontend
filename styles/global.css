@@ -70,3 +70,6 @@ figure {
         color: var(--white);
     }
 }
+[contenteditable] {
+    outline: 0px solid transparent;
+}

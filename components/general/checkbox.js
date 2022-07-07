@@ -62,9 +62,14 @@ const CheckComponent = styled.div`
 `;
 
 const CheckboxContainer = ({ children, completed }) => {
+    let [complete, onComplete] = React.useState(completed);
     return (
         <CheckComponent>
-            <input type="checkbox" checked={completed} />
+            <input
+                type="checkbox"
+                checked={complete}
+                onChange={() => onComplete(!complete)}
+            />
             <div></div>
             <p>{children}</p>
         </CheckComponent>
